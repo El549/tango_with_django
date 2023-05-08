@@ -36,6 +36,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('rango/', include('rango.urls')), # New!
     path('accounts/register/', MyRegistrationView.as_view(), name='registration_register'),
-    path('accounts/password/change/done/', include('rango.urls'), name='auth_password_change_done'),
+    # path('accounts/password/change/done/', include('rango.urls'), name='auth_password_change_done'),
     path('accounts/', include('registration.backends.simple.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
